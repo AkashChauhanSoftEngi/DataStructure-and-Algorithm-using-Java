@@ -1,0 +1,21 @@
+class Solution {
+	public static void main(String[] args) throws java.lang.Exception {
+		Solution solution = new Solution();
+		System.out.println(solution.solution(5, 8));
+	}
+
+	public int solution(int M, int N) {
+		if (M == 0 && N == 0) {
+			return 0;
+		} else if (M == 0) {
+			return func(N);
+		}
+		return (func(M - 1) ^ func(N));
+	}
+
+	static int func(int num) {
+		int res[] = { num, 1, num + 1, 0 };
+		return res[num % 4];
+	}
+
+}
