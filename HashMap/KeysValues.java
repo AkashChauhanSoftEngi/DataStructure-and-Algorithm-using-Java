@@ -1,5 +1,6 @@
 /*
 keys are unique but value can vary, so in case of duplicates, it updates previous value with new one
+Hash Table is the table we form in HashMap
 */
 import java.util.*;
 import java.lang.*;
