@@ -86,7 +86,7 @@ class BinarySearchTree{
     
     public boolean deleteNode(int data){
         Node node;
-        Node parent=null;
+        Node parent=root;
         if(root==null){
             return false;
         }
@@ -118,7 +118,7 @@ class BinarySearchTree{
                 return true;
             }
             
-            //if only node has only one child (left | right)
+            //if node has only one child (left | right)
             if(node.left!=null & node.right==null){
                 if(parent.left==node){
                 parent.left=node.left;
@@ -142,7 +142,25 @@ class BinarySearchTree{
             
             //if node has both left and right child
             if(node.left!=null & node.right!=null){
-                            /*Not completed*/
+                            /*
+                            To find smallest element in right sub tree=successor;
+                            */
+                            Node successor = getSuccessor(node);
+                            
+                            if(node==root){
+                                root=successor;
+                            }
+                            
+                            if(parent.left==node){
+                             parent.left=successor;
+                             successor.left = node.left;
+                             return true;
+                            }
+                            if(parent.right==node){
+                             parent.right=successor;
+                             successor.left = node.left;
+                             return true;
+                            }
                             return false;    
             }
             
@@ -156,6 +174,34 @@ class BinarySearchTree{
         
     }
     
+    public Node getSuccessor(Node deleteNode){
+        Node current=null;
+        Node successor=null;
+        Node successorParent=null;
+        
+        current=deleteNode.right;
+        
+        if(current.left==null){
+            successor=current;
+            successor.right=current.right;
+            return successor;
+        }
+        
+        while(current!=null){
+            successorParent=successor;
+            successor=current;
+            current=current.left;
+        }
+        if(successor.right==null){
+        successorParent.left=null;
+        }
+        else{
+            successorParent.left=successor.right;
+            successor.right=deleteNode.right;
+        }
+        return successor;
+    }
+    
     public static void main(String[] args){
         BinarySearchTree obj=new BinarySearchTree();
         
@@ -164,22 +210,27 @@ class BinarySearchTree{
         obj.insertNode(1);
         obj.insertNode(4);
         obj.insertNode(3);
+        obj.insertNode(5);
+        obj.insertNode(6);
         obj.displayTree(obj.root);
         
         //empty space/line
         System.out.println();
         
         //search
-        if(obj.searchNode(3)){
-            System.out.println(3 + " Exists in the tree");
+        if(obj.searchNode(6)){
+            System.out.println(6 + " Exists in the tree");
         }
         
         //empty space/line
         System.out.println();
         
         //delete
-        if(obj.deleteNode(3)){
-            System.out.println("3 is deleted!");
+        if(obj.deleteNode(4)){
+            System.out.println("4 is deleted!");
+        }
+        else{
+            System.out.println("Node does not exist in given Tree till now!");
         }
         obj.displayTree(obj.root);
         
