@@ -107,19 +107,30 @@ class BinarySearchTree{
         if(node.key==data)
         {
             //if node does not have any left of right child
-            if(node==parent.left & (node.left==null & node.right==null)){
-            parent.left=null;
-            System.gc();
-            return true;
-            }
-            if(node==parent.right & (node.left==null & node.right==null)){
-                parent.right=null;
-                System.gc();
-                return true;
+            if(node.left==null & node.right==null){
+                if(root==node){
+                    root=null;
+                    return true;
+                }
+                if(node==parent.right){
+                    parent.left=null;
+                    System.gc();
+                    return true;   
+                }
+                if(node==parent.right){
+                    parent.right=null;
+                    System.gc();
+                    return true;
+                }
             }
             
             //if node has only one child (left | right)
             if(node.left!=null & node.right==null){
+                if(root==node){
+                    root=node.left;
+                    node=null;
+                    return true;
+                }
                 if(parent.left==node){
                 parent.left=node.left;
                 }
@@ -130,6 +141,11 @@ class BinarySearchTree{
                 return true;
             }
             if(node.right!=null & node.left==null){
+                if(root==node){
+                    root=node.right;
+                    node=null;
+                    return true;
+                }
                 if(parent.left==node){
                 parent.left=node.right;
                 }
@@ -149,6 +165,8 @@ class BinarySearchTree{
                             
                             if(node==root){
                                 root=successor;
+                                root.left=node.left;
+                                return true;
                             }
                             
                             if(parent.left==node){
@@ -197,8 +215,8 @@ class BinarySearchTree{
         }
         else{
             successorParent.left=successor.right;
-            successor.right=deleteNode.right;
         }
+        successor.right=deleteNode.right;
         return successor;
     }
     
@@ -226,8 +244,8 @@ class BinarySearchTree{
         System.out.println();
         
         //delete
-        if(obj.deleteNode(4)){
-            System.out.println("4 is deleted!");
+        if(obj.deleteNode(2)){
+            System.out.println("root is deleted!");
         }
         else{
             System.out.println("Node does not exist in given Tree till now!");
