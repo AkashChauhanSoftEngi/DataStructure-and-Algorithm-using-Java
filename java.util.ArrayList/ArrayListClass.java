@@ -9,7 +9,8 @@ public class ArrayListClass {
 		ref.add("Third");
 		ref.add(1,"-");
 		System.out.println("ArrayList:"+ ref);
-		ref.remove(1);
+		ref.remove(1);//index
+		ref.remove("Second");//object
 		System.out.println("ArrayList:"+ ref);
 		System.out.println("Size:" + ref.size());
 		ref.clear();
