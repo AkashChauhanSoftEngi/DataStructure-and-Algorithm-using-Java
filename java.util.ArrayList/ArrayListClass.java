@@ -11,6 +11,7 @@ public class ArrayListClass {
 		System.out.println("ArrayList:"+ ref);
 		ref.remove(1);
 		System.out.println("ArrayList:"+ ref);
+		System.out.println("Size:" + ref.size());
 		ref.clear();
 	}
 	public static void main(String[] args){
