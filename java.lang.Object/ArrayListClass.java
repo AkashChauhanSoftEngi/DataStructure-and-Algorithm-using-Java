@@ -1,7 +1,6 @@
-package javacode.programming.ocaexam.c5;
-
 import java.util.ArrayList;
 import java.util.List;
+
 public class ArrayListClass {
 	public void printArrayList(){
 		List<String> ref=new ArrayList<String>();
