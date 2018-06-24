@@ -1,3 +1,9 @@
+/*
+  ( Using power of the matrix {{1,1},{1,0}} )
+  This another O(n) which relies on the fact that if we n times multiply the matrix M = {{1,1},{1,0}} 
+  to itself (in other words calculate power(M, n )), then we get the (n+1)th Fibonacci number as the 
+  element at row and column (0, 0) in the resultant matrix.
+*/
 import java.util.*;
 import java.lang.*;
 import java.io.*;
