@@ -1,3 +1,10 @@
+// Creating a fibonacci series for very large number of elements using BigInteger.
+
+/* BigInteger Class in Java. 
+   BigInteger class is used for mathematical operation which involves very big integer calculations that are outside the limit of all available primitive data types.
+   For example factorial of 100 contains 158 digits in it so we can't store it in any primitive data type available.
+ */
+
 import java.math.*;
 import java.util.*;
 
