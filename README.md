@@ -12,9 +12,10 @@ I intend to uploading more implementations using java with simple and easy descr
   - Depth: Log(n), base 2 {from root node}
 
 * Binary Search Tree(BST)
-  - LeftNode.data <= root.data < RightNode.data {Ordered}
+  - LeftNode.data < root.data < RightNode.data {Ordered}
   - Left and Right tree must be BST as well
   - Log(n), base 2: search time
+  - There can not be any duplicate element in the entire tree
   - Reference: https://www.youtube.com/watch?v=MILxfAbIhrE
   
 * Left Skew and right skew tree
