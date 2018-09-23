@@ -51,3 +51,43 @@ I intend to uploading more implementations using java with simple and easy descr
   - Shortest path: all black nodes
   - So longest path <= 2* shortest path
   - uses TreeMap for the implementation
+
+## Heap
+* Binary Heap
+  - Complete Binary Tree, no missing element, max two children
+  - Can be represented by Array as well, in simple level order traversal
+  - Binary Heap is being used to implement, Priority Queue
+  - Heap: general term with no restriction on no of children
+  - Reference: https://www.youtube.com/watch?v=t0Cq6tVNRBA
+  
+* Max Heap
+  - Largest element at root
+  - Elements are bigger than their children
+  - Smaller elements as we go down
+  
+* Min Heap
+  - Smallest element as root
+  - Elements are smaller than their children
+  - Larger elements as we go down
+
+* Insertion in Heap
+  - Next empty spot
+  - top to bottom
+  - left to right
+  - We do not need to care about the value at first, just find a suitable empty spot
+  - Then later we can use heapify to find the correct position of this element
+  - HeapifyUp(): swap with the parent if smaller than root, until you find the correct position  
+
+* Delettion
+  - Easiest to delete the last element no need of any kind of change
+  - remove the element and replace it with the last location element
+  - Run heapifyDown() on this element to find the correct position according to its value
+  - Replace it with smallest element among the children
+  
+* Heapsort
+  - Build the heap: Insert element in natural order
+  - Try to make it a Max heap
+  - Find the correct place of root node in Max heap using heapifyDown
+  - Repeat this process from the root then top to down and left to right, till the last node in the heap
+  - Output of heap sort: Complete Max Heap
+  
