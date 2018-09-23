@@ -34,6 +34,7 @@ I intend to uploading more implementations using java with simple and easy descr
   - HBT(k=0)
   - No missing number
   - all leaf nodes at height h
+  - last level fills completely
 
 * Complete Binary Tree
   - No missing Number
