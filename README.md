@@ -92,6 +92,6 @@ I intend to uploading more implementations using java with simple and easy descr
   - Output of heap sort: Complete Max Heap
 
 * How is it different from Binary Search Tree ?
-  • The ordering in binary heap is top to bottom compared to left to right in case of binary search tree.
-  • Duplicate elements are allowed in Binary Heap which is not the case with Binary Search Tree (a duplicate key are overwritten by the new key).
-  • A binary heap is a complete binary tree which may not be true for a Binary Search Tree.
+  - The ordering in binary heap is top to bottom compared to left to right in case of binary search tree.
+  - Duplicate elements are allowed in Binary Heap which is not the case with Binary Search Tree (a duplicate key are overwritten by the new key).
+  - A binary heap is a complete binary tree which may not be true for a Binary Search Tree.
