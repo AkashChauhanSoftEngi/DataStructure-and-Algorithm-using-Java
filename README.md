@@ -30,7 +30,7 @@ I intend to uploading more implementations using java with simple and easy descr
 * AVL Tree
   - It is a HBT(k=1)
 
-* Full Binary Tree
+* Full Binary Tree (Fully Complete Binary Tree)
   - HBT(k=0)
   - No missing number
   - all leaf nodes at height h
