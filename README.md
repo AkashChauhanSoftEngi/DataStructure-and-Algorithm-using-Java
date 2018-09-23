@@ -35,7 +35,7 @@ I intend to uploading more implementations using java with simple and easy descr
   - No missing number
   - all leaf nodes at height h
   - last level fills completely
-
+  
 * Complete Binary Tree
   - No missing Number
   - all leaf nodes at height h or h-1
@@ -90,4 +90,8 @@ I intend to uploading more implementations using java with simple and easy descr
   - Find the correct place of root node in Max heap using heapifyDown
   - Repeat this process from the root then top to down and left to right, till the last node in the heap
   - Output of heap sort: Complete Max Heap
-  
+
+* How is it different from Binary Search Tree ?
+  • The ordering in binary heap is top to bottom compared to left to right in case of binary search tree.
+  • Duplicate elements are allowed in Binary Heap which is not the case with Binary Search Tree (a duplicate key are overwritten by the new key).
+  • A binary heap is a complete binary tree which may not be true for a Binary Search Tree.
