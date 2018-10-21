@@ -24,6 +24,7 @@ public class FindBestPayerAmongAll {
 			return;
 		}
 
+		/*As only two contests are there for each player{A, B}*/
 		int numberOfPlayers = inputList.size() / 2;
 
 		int[] player = new int[numberOfPlayers];
